@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For My Rusk ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background:url("rus.jpg") no-repeat center center fixed;
+    background-size:cover;
+    text-align:center;
+    color:white;
+    padding:30px;
+}
+
+/* Dark romantic overlay */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(5px);
+    z-index:-1;
+}
+
+/* Title */
+.title{
+    font-size:70px;
+    margin-top:40px;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{text-shadow:0 0 10px white;}
+    to{text-shadow:0 0 40px pink;}
+}
+
+/* Timeline Container */
+.timeline{
+    margin-top:70px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:60px;
+}
+
+/* Connecting Line */
+.timeline::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:10%;
+    width:80%;
+    height:4px;
+    background:pink;
+    z-index:-1;
+    box-shadow:0 0 20px pink;
+}
+
+/* Event Card */
+.event{
+    width:200px;
+    background:rgba(255,255,255,0.15);
+    padding:20px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    position:relative;
+}
+
+/* Heart Icon */
+.event::after{
+    content:"💖";
+    position:absolute;
+    top:-30px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:25px;
+}
+
+/* Button */
+button{
+    margin-top:10px;
+    padding:8px 15px;
+    border:none;
+    border-radius:20px;
+    background:white;
+    color:#ff4e50;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:yellow;
+}
+
+/* Hanging Date */
+.date{
+    display:none;
+    margin-top:15px;
+    background:white;
+    color:#ff4e50;
+    padding:8px 15px;
+    border-radius:15px;
+    font-weight:bold;
+    animation:drop 0.5s ease;
+}
+
+@keyframes drop{
+    from{transform:translateY(-20px);opacity:0;}
+    to{transform:translateY(0);opacity:1;}
+}
+
+/* Question Section */
+.question{
+    margin-top:100px;
+}
+
+.response{
+    margin-top:20px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* Final Wish */
+.final{
+    margin-top:80px;
+    font-size:45px;
+    font-weight:bold;
+    background:linear-gradient(to right,yellow,pink,white);
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:glow 2s infinite alternate;
+}
+</style>
+</head>
+<body>
+
+<h1 class="title">Hii Rusk 😍💖🔥</h1>
+
+<h2>Our Love 💞</h2>
+
+<div class="timeline">
+
+    <div class="event">
+        <p>First Meet</p>
+        <button onclick="showDate('d1')">Reveal 🎀</button>
+        <div id="d1" class="date">18 / 03 / 2024</div>
+    </div>
+
+    <div class="event">
+        <p>First Talk</p>
+        <button onclick="showDate('d2')">Reveal 🎀</button>
+        <div id="d2" class="date">22 / 11 / 2024</div>
+    </div>
+
+    <div class="event">
+        <p>First Call</p>
+        <button onclick="showDate('d3')">Reveal 🎀</button>
+        <div id="d3" class="date">24 / 04 / 2025</div>
+    </div>
+
+    <div class="event">
+        <p>Proposed 💍</p>
+        <button onclick="showDate('d4')">Reveal 🎀</button>
+        <div id="d4" class="date">18 / 08 / 2025</div>
+    </div>
+
+</div>
+
+<div class="question">
+    <h2>Will You Be With Me Forever? ❤️</h2>
+    <button onclick="yes()">YES 😍</button>
+    <button onclick="no()">NO 😢</button>
+    <div id="answer" class="response"></div>
+</div>
+
+<div class="final">
+    💘 HAPPY VALENTINE'S DAY MY LOVE 💘
+</div>
+
+<script>
+function showDate(id){
+    document.getElementById(id).style.display="block";
+}
+
+function yes(){
+    document.getElementById("answer").innerHTML =
+    "🎉😍💖 YAYYYYY!!! My heart is exploding with happiness!!! 💖😍🎉";
+}
+
+function no(){
+    document.getElementById("answer").innerHTML =
+    "😢💔 Even then… I will still love you forever 💔😢";
+}
+</script>
+
+</body>
+</html>
